@@ -38,6 +38,14 @@ After={{ systemd_service_Unit_After | join(",") }}
 {% endif -%}
 
 [Service]
+{% if systemd_service_User is defined %}
+User={{ systemd_service_User }}
+{% endif -%}
+
+{% if systemd_service_Group is defined %}
+Group={{ systemd_service_Group }}
+{% endif -%}
+
 ExecStart={{ systemd_service_Service_ExecStart }}
 EnvironmentFile=-/etc/default/{{ systemd_service_name }}
 Type={{ systemd_service_Service_Type }}
