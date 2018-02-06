@@ -95,6 +95,10 @@ Restart={{ systemd_service_Service_Restart }}
 Service_PrivateTmp={{ systemd_service_Service_PrivateTmp }}
 {% endif -%}
 
+{% if systemd_service_Service_LimitNOFILE is defined %}
+LimitNOFILE={{ systemd_service_Service_LimitNOFILE }}
+{% endif -%}
+ 
 [Install]
 {% if systemd_service_Install_WantedBy is defined %}
 WantedBy={{ systemd_service_Install_WantedBy }}
