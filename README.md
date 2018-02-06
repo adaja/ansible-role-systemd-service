@@ -59,7 +59,7 @@ Role Variables
 |`systemd_service_Service_PIDFile`|String|| [Service]PIDFile
 |`systemd_service_Service_BusName`|String|| [Service]BusName
 |`systemd_service_Service_PrivateTmp`|String|| [Service]PrivateTmp
-
+|`systemd_service_Service_LimitNOFILE`|String|| [Service]LimitNOFILE
 
 
 ### [Install]
